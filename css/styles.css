@@ -253,7 +253,7 @@ main{
     background-color: #fbfaf3;
     margin: 10px auto;
     border-radius: 3px;
-    border: 2px solid #fbfaf3;
+    /* border: 2px solid #fbfaf3; */
     transition: all 0.5s;
     margin: 0 0 0 5rem;
   }
@@ -277,7 +277,7 @@ main{
   
   #outer3.outerActive {
     background-color: #fbfaf3;
-    border: 2px solid #fbfaf3;
+    /* border: 2px solid #fbfaf3; */
     transition: all 0.5s;
     
   }
