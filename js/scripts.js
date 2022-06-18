@@ -100,3 +100,103 @@ document.addEventListener('keyup',function(e){
 });
 
 loadGallery();
+
+
+// Top fade in
+const observerLeft = new IntersectionObserver(entries => {
+  
+  entries.forEach(entry => {
+    console.log(entry)
+    const square = entry.target.querySelector('#bookingImg'); // Rename this
+    const circle = entry.target.querySelector('#bookingText'); // Rename this
+    
+
+    if (entry.isIntersecting) {
+      square.classList.add('square-animation-left');
+      circle.classList.add('square-animation-right');
+
+      
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('square-animation-left');
+    circle.classList.remove('square-animation-right');
+  });
+});
+
+observerLeft.observe(document.querySelector('.square'));
+
+// Mid Fade In
+const observerRight = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    console.log(entry)
+    const square = entry.target.querySelector('#middleText'); // Rename this
+    const circle = entry.target.querySelector('#galleryView'); // Rename this
+    
+
+    if (entry.isIntersecting) {
+      square.classList.add('square-animation-left');
+      circle.classList.add('square-animation-right');
+
+      
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('square-animation-left');
+    circle.classList.remove('square-animation-right');
+  });
+});
+
+observerRight.observe(document.querySelector('.mid'));
+
+
+
+// Reviews Opac
+const observerReview = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    console.log(entry)
+    const square = entry.target.querySelector('#reviews'); // Rename this
+    
+    
+
+    if (entry.isIntersecting) {
+      square.classList.add('opac-reviews-all');
+
+      
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('opac-reviews-all');
+  });
+});
+
+observerReview.observe(document.querySelector('#reviewOpac'));
+
+// Contact fade
+
+const contactFade = new IntersectionObserver(entries => {
+  
+  entries.forEach(entry => {
+    console.log(entry)
+    const square = entry.target.querySelector('.contact-left'); // Rename this
+    const circle = entry.target.querySelector('#contact'); // Rename this
+    
+
+    if (entry.isIntersecting) {
+      square.classList.add('square-animation-left');
+      circle.classList.add('square-animation-right');
+
+      
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('square-animation-left');
+    circle.classList.remove('square-animation-right');
+  });
+});
+
+contactFade.observe(document.querySelector('#contact-layout'));

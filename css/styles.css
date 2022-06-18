@@ -5,7 +5,9 @@
 }
 
 
-
+a{
+  text-decoration: none;
+}
 
 h1,h2,h3,h4,h5,p{
     margin: 0;
@@ -64,7 +66,7 @@ main{
     background-image: url("../assests/nadine-marfurt-DyEdTr9eqPo-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 105vh;
     color: white;
     
    
@@ -486,7 +488,7 @@ main{
         width: 100%;
     }
     .images{
-        min-width: none;
+        min-width: 8rem;
     }
     #middleLayout{
         padding: 3rem 0 3rem 0;
@@ -533,6 +535,72 @@ main{
     }
     
 } */
+
+
+
+
+
+
+
+
+
+.square-animation-left{
+    animation-name: wipe-enter-left;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+}
+.square-animation-right{
+  animation-name: wipe-enter-right;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  
+}
+.opac-reviews-all{
+  animation-name: opac-reviews;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  
+}
+
+
+
+
+
+
+
+@keyframes wipe-enter-left {
+
+	0% {
+    transform: translate(-90px, 0%);
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+ 
+}
+@keyframes wipe-enter-right {
+
+	0% {
+    transform: translate(90px, 1%);
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+ 
+}
+@keyframes opac-reviews {
+
+	0% {
+		opacity: 0;
+    
+	}
+	100% {
+		opacity: 1;
+	}
+ 
+}
 
 
 
