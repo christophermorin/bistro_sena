@@ -5,7 +5,7 @@ With a focus on minimalism, Bisto Sena is a fully responsive, sleek and elegant 
 
 ## Optimizations
 
-Optimizing for better responsiveness has been the main focus so far. Next will greater accessibility, and later adding design transitions. 
+Optimizing for better responsiveness has been the main focus so far. Next will be greater accessibility, and later adding design transitions. 
 
 ## Lessons Learned:
 
