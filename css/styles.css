@@ -1,546 +1,562 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* ************************* */
+/* Globals */
+/* ************************* */
 
-a{
+a {
   text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,p{
-    margin: 0;
-}
-body{
-    background: #fbfaf3;
-    font-family: 'Poppins', sans-serif;
-}
-
-#container{
-    margin: 0 5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
 }
 
-#cont-display{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+body {
+  background: #fbfaf3;
+  font-family: 'Poppins', sans-serif;
 }
-#cont-layout{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+
+.button {
+  padding: 1.5rem 2.5rem;
+  background: black;
+  margin: 0 0 2rem 0;
+  color: #fff;
+  font-size: 1rem;
 }
-.button{
-    padding: 1.5rem 2.5rem;
-    background: black;
-    margin: 0 0 2rem 0;
-    color: #fff;
-    font-size: 1rem;
+
+.images {
+  width: 100%;
+  min-width: 10rem;
+  height: auto;
+  box-shadow: 5px 5px 10px 2px black;
 }
-.images{
-    width: 100%;
-    min-width: 10rem;
-    height: auto;
-    /* border: 2px solid black; */
-    box-shadow: 5px 5px 10px 2px black;
+
+.gallery-images {
+  width: 100%;
+  min-width: 10rem;
+  height: auto;
 }
-.gallery-images{
-    width: 100%;
-    min-width: 10rem;
-    height: auto;
+
+.img-pos {
+  position: relative;
+  bottom: 25%;
 }
-    .img-pos{
-        position: relative;
-        bottom: 25%;
-    }
 
 
-
-
-main{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url("../assests/nadine-marfurt-DyEdTr9eqPo-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 105vh;
-    color: white;
-    padding-bottom: 3.5gitrem;
-    
-   
+/* **************************** */
+/* PAGE LOAD LAYOUT */
+/* **************************** */
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../assests/nadine-marfurt-DyEdTr9eqPo-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 105vh;
+  color: white;
+  padding-bottom: 3.5gitrem;
 }
-    main h3{
-        padding: 1.5rem 2.5rem;
-        margin: 2rem 0 0 0;
-        background: black;
-        text-transform: uppercase;   
-    }
-    main h1{
-        font-size: 5rem;
-        text-transform: uppercase;
-        padding: 1rem 2.5rem;
-        background: #000;
-    }
+
+main h3 {
+  padding: 1.5rem 2.5rem;
+  margin: 2rem 0 0 0;
+  background: black;
+  text-transform: uppercase;
+}
+
+main h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: #000;
+}
 
 
- .gallery{
-    padding: 5rem 0 2rem 0;
-    
- }
 
+/* *********************** */
 /* BOOKINGS SECTION */
-.booking{
-    padding: 15rem 5rem 5rem 5rem;
- }
+/* ************************ */
+.booking {
+  padding: 15rem 5rem 5rem 5rem;
+}
 
- #booking-layout{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    
+#booking-layout {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
- #bookingText{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    padding: 3rem 0 0 5rem;
-    border-bottom: 1px solid black;
-    /* border-right: 1px solid black; */
-    box-shadow: 20px 20px 40px 5px black;
-    width: 60%;
-   
- }
-    #bookingText h3{
-        font-size: 2rem;
-        text-transform: uppercase;
-        padding: 0 0 2rem 0;
-    }
-    #bookingText p{
-        /* width: 60%; */
-        padding: 0 0 4rem 0;
-        
-    }
 
- #bookingImg{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:1rem;
-    text-align: center; 
- }
+#bookingText {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  padding: 3rem 0 0 5rem;
+  border-bottom: 1px solid black;
+  box-shadow: 20px 20px 40px 5px black;
+  width: 60%;
+}
 
-/* MIDDLE SECTION */
-#middleLayout{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    padding: 3rem 0 0 5rem;
+#bookingText h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0 0 2rem 0;
 }
-#middleText{
-    max-width: 50%;
-    
-    box-shadow: 20px 20px 40px 5px black;
-    padding: 5rem 2rem 0 5rem;
+
+#bookingText p {
+  padding: 0 0 4rem 0;
 }
-#middleText h3{
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 0 0 2rem 0;
-}
-#middleText p{
-    padding: 0 0 2rem 0;
+
+#bookingImg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
 }
 
 
+/* *********************** */
+/* Gallery/Middle Text Section */
+/* *********************** */
+#middleLayout {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  padding: 3rem 0 0 5rem;
+}
 
+#middleText {
+  max-width: 50%;
+  box-shadow: 20px 20px 40px 5px black;
+  padding: 5rem 2rem 0 5rem;
+}
+
+#middleText h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0 0 2rem 0;
+}
+
+#middleText p {
+  padding: 0 0 2rem 0;
+}
+
+
+/* *********************** */
 /* GALLERY SECTION */
+/* *********************** */
+#toggleContainer label {
+  text-align: center;
+  width: 70px;
+}
 
-#toggleContainer label { 
-    text-align: center;
-    width: 70px;
-    
-  }
-  
-  #imgs-container {
-    min-height: 640px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  #toggleContainer {
-    min-height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: auto;
-    position: absolute;
-    margin-bottom: 14px;
-    
-  }
-  
-  #tilesContainer {
-    min-height: 30vh;
-    width: 100vw;
-    margin-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    align-content: center;
-    
-  }
-  
-  .tileItem {
-    width: 250px;
-    height: 250px;
-    margin: 5px;
-    border-radius: 5px;
-    transition: all 0.5s ease;
-  }
-  
-  .tileItem:hover {
-     transform: scale(1.05);
-    transition: all 0.5s ease;
-  }
-  
-  #galleryContainer { 
-    height: 500px;
-    width: 100%;
-    background: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  #toggle {
-    height: 10vh;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-  
-  #tilesView {
-    min-height: 640px;
-    width: 100%;
-    background: #fbfaf3;
-    /* background: linear-gradient(111deg, rgba(246,210,106,1) 0%, rgba(255,159,0,1) 52%, rgba(251,197,100,1) 100%); */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  #galleryView {
-    min-height: 640px;
-    width: 100%;
-    background: #fbfaf3;
-    /* background: linear-gradient(to bottom, #fbfaf3 5%, #000 12%); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  #outer3 {
-    width: 100px;
-    height: 40px;
-    background-color: #fbfaf3;
-    margin: 10px auto;
-    border-radius: 3px;
-    /* border: 2px solid #fbfaf3; */
-    transition: all 0.5s;
-    margin: 0 0 0 5rem;
-  }
-  
-  #slider3 {
-    height: 36px;
-    width: 46px;
-    background-color: orange;
-    border-radius: 3px;  
-    transition: all 0.5s;
-  }
-  
-  #slider3.active {
-    -webkit-transform: translatex(50px);
-    -ms-transform: translatex(50px);
-    -o-transform: translatex(50px);
-    transform: translatex(50px);
-    transition: all 0.5s;
-    background-color: black;;
-  }
-  
-  #outer3.outerActive {
-    background-color: #fbfaf3;
-    /* border: 2px solid #fbfaf3; */
-    transition: all 0.5s;
-    
-  }
-  
-  #mainView {
-    height: 450px;
-    width: 450px;  
-    border-radius: 5px;
-    background-color: black;
-    margin-left: 10px;
-    margin-right: 10px;
-    z-index: 1;
-    transition: all 1s; 
-    
-  }
-  
-  #mainView:hover {
-    transform: scale(1.2);
-    transition: all 1s;   
-  }
-  
-  #leftView {
-    height: 400px;
-    width: 250px;
-    opacity: 0.5;
-    border-radius: 5px;
-    transform: skewy(5deg);
-    transform-origin: top right;
-    background-color: #eb9100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;  
-  }
-  
-  #leftView:hover {
-    opacity: 1;
-    transition: all 1s;
-  }
-  
-  #rightView {
-    height: 400px;
-    width: 250px;
-    opacity: 0.5;
-    border-radius: 5px;
-    transform: skewy(-5deg);
-    transform-origin: top left;
-    background-color: #eb9100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   transition: all 1s;
-  }
-  
-  #rightView:hover {
-    opacity: 1;
-    transition: all 1s;
-  }
-  
-  .navBtns {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: none;
-    position: absolute;
-    opacity: 0.8;
-    background-color: transparent;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .navBtns:hover {
-    opacity: 1;
-    transition: all 1s;
-    background-color: #eb9100;
-  }
-  
-  #navLeft {
-    left: 50px;
-  }
-  
-  #navRight {
-    right: 50px;
-  }
-  
-  #linkTag { 
-    cursor: pointer;
-    z-index: 1;
-    box-sizing: border-box;
-  }
+#imgs-container {
+  min-height: 640px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#toggleContainer {
+  min-height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: auto;
+  position: absolute;
+  margin-bottom: 14px;
+}
+
+#tilesContainer {
+  min-height: 30vh;
+  width: 100vw;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+.tileItem {
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.tileItem:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+#galleryContainer {
+  height: 500px;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#toggle {
+  height: 10vh;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+#tilesView {
+  min-height: 640px;
+  width: 100%;
+  background: #fbfaf3;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#galleryView {
+  min-height: 640px;
+  width: 100%;
+  background: #fbfaf3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#outer3 {
+  width: 100px;
+  height: 40px;
+  background-color: #fbfaf3;
+  margin: 10px auto;
+  border-radius: 3px;
+  transition: all 0.5s;
+  margin: 0 0 0 5rem;
+}
+
+#slider3 {
+  height: 36px;
+  width: 46px;
+  background-color: orange;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+#slider3.active {
+  -webkit-transform: translatex(50px);
+  -ms-transform: translatex(50px);
+  -o-transform: translatex(50px);
+  transform: translatex(50px);
+  transition: all 0.5s;
+  background-color: black;
+  ;
+}
+
+#outer3.outerActive {
+  background-color: #fbfaf3;
+  transition: all 0.5s;
+
+}
+
+#mainView {
+  height: 450px;
+  width: 450px;
+  border-radius: 5px;
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1;
+  transition: all 1s;
+
+}
+
+#mainView:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+#leftView {
+  height: 400px;
+  width: 250px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(5deg);
+  transform-origin: top right;
+  background-color: #eb9100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#leftView:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+#rightView {
+  height: 400px;
+  width: 250px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(-5deg);
+  transform-origin: top left;
+  background-color: #eb9100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#rightView:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.navBtns {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  opacity: 0.8;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.navBtns:hover {
+  opacity: 1;
+  transition: all 1s;
+  background-color: #eb9100;
+}
+
+#navLeft {
+  left: 50px;
+}
+
+#navRight {
+  right: 50px;
+}
+
+#linkTag {
+  cursor: pointer;
+  z-index: 1;
+  box-sizing: border-box;
+}
 
 
-
+/* *********************** */
 /* REVIEWS SECTION */
+/* *********************** */
 
-#review-layout{
-    background: #000;
-    color: #fff;
-    padding: 5rem 5rem 15rem 5rem;
+#review-layout {
+  background: #000;
+  color: #fff;
+  padding: 5rem 5rem 15rem 5rem;
 }
-#review-layout h3{
-    text-transform: uppercase;
+
+#review-layout h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5rem 0 8rem 0;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+#reviews {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.review {
+  width: 33.3333%;
+  padding: 0 6rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.review h5 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0 0 2rem 0;
+}
+
+.review p {
+  font-weight: 300;
+  color: grey;
+  padding: 0 0 2rem 0;
+}
+
+i {
+  font-size: 3rem;
+}
+
+/* *********************** */
+/* CONTACT SECTION */
+/* ********************** */
+#contact-layout {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+#contact {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 10rem 0 0 5rem;
+}
+
+#contact h3 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 0 0 5rem 0;
+}
+
+.contact-list {
+  padding: 0;
+}
+
+.contact-list li {
+  list-style: none;
+  padding: 2rem 0;
+}
+
+.list-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 0 1rem 0;
+}
+
+.contact-left {
+  background-image: url("../assests/annie-spratt-tKpA64QrccM-unsplash.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 50%;
+  background-position: 70% 20%;
+}
+
+
+
+
+/* *********************** */
+/* MEDIA QUERIES */
+/* *********************** */
+
+@media (max-width: 1180px) {
+  main h1 {
+    font-size: 3rem;
+  }
+
+  .review {
+    width: 100%;
     text-align: center;
-    padding: 5rem 0 8rem 0;
-    font-size: 3rem;
-    overflow: hidden;
+  }
 }
- #reviews{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    
- }
- .review{
-    width: 33.3333%;
-    padding: 0 6rem;
-    display: flex;
-    flex-flow: column wrap;
- }
- .review h5{
-    text-transform: uppercase;
-    font-size: 1rem;
-    padding: 0 0 2rem 0;
- }
- .review p {
-    font-weight: 300;
-    color: grey;
-    padding: 0 0 2rem 0;
- }
- i{
-    font-size: 3rem;
- }
 
- #contact-layout{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-}
- #contact{
-    display: flex;
+@media (max-width: 1025px) {
+
+  main h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .booking {
+    padding: 10rem 0 5rem 0;
+  }
+
+  #booking-layout {
     flex-flow: column;
-    justify-content: flex-start;
-    width: 50%;
-    padding: 10rem 0 0 5rem;
- }
- #contact h3{
-    text-transform: uppercase;
-    font-size: 3rem;
+  }
+
+  #bookingImg {
+    gap: 0.2rem;
+    padding: 0 0.5rem;
+  }
+
+  #bookingText {
+    padding: 5rem 2rem 0 2rem;
+    width: 100%;
+  }
+
+  .images {
+    min-width: 8rem;
+  }
+
+  #middleLayout {
+    padding: 3rem 0 3rem 0;
+  }
+
+  #middleText {
+    max-width: 100%;
+    padding: 5rem 2rem 0 2rem;
+  }
+
+  #mainView {
+    width: 300px;
+  }
+
+  #tilesContainer {
     padding: 0 0 5rem 0;
- }
- .contact-list{
-    padding: 0;
- }
- .contact-list li{
-    list-style: none;
-    padding: 2rem 0;
- }
-    .list-title{
-        text-transform: uppercase;
-        font-weight: 700;
-        padding: 0 0 1rem 0;
-    }
+  }
 
- .contact-left{
-    background-image: url("../assests/annie-spratt-tKpA64QrccM-unsplash.jpg");
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 50%;
-    background-position: 70% 20%;
- }
+  #outer3 {
+    margin: 0 0 0 2rem;
+  }
 
+  #review-layout {
+    padding: 5rem 0 10rem 0;
+  }
 
+  .review {
+    padding: 0 2rem;
+  }
 
+  #contact-layout {
+    flex-flow: column;
+  }
 
+  .contact-left {
+    display: none;
+  }
 
- /* MEDIA QUERIES */
-
- @media (max-width: 1180px) {
-    main h1{
-        font-size: 3rem;
-    }
-    .review{
-        width: 100%;
-        text-align: center;
-    }
- }
-
-
-
- @media (max-width: 1025px) {
-
-    main h1{
-        font-size: 2rem;
-        text-align: center;
-    }
-    .booking{
-        padding: 10rem 0 5rem 0;
-    }
-    #booking-layout{
-        flex-flow: column;
-    }
-    #bookingImg{
-        gap: 0.2rem;
-        padding: 0 0.5rem;
-    }
-    #bookingText{
-        padding: 5rem 2rem 0 2rem;
-        width: 100%;
-    }
-    .images{
-        min-width: 8rem;
-    }
-    #middleLayout{
-        padding: 3rem 0 3rem 0;
-    }
-    #middleText{
-       max-width: 100%;
-       padding: 5rem 2rem 0 2rem;
-    }
-    #mainView{
-        width: 300px;
-    }
-    #tilesContainer{
-        padding: 0 0 5rem 0;
-    }
-    #outer3{
-        margin: 0 0 0 2rem;
-    }
-    #review-layout{
-        padding: 5rem 0 10rem 0;
-    }
-    .review{
-        padding: 0 2rem;
-    }
-    #contact-layout{
-        flex-flow: column;
-    }
-    .contact-left{
-        display: none;
-    }
-   
- }
-
- /* @media (prefers-color-scheme: light) {
-    body {
-      background-color: #fbfaf3;
-      color: black;
-    }
 }
 
- @media (prefers-color-scheme: dark) {
-    body {
-      background-color: black;
-      color: white;
-    }
-    
-} */
+/* ****************************************** */
+/* ANIMATIONS/PAGE TRANSITIONS */
+/* Handling overflow when transitioning */
+/* ****************************************** */
 
-.square{
+.bookingFade {
   overflow: hidden;
 }
-.mid{
+
+.galleryFade {
+  overflow: hidden;
+}
+
+#contact-layout {
   overflow: hidden;
 }
 
@@ -548,70 +564,67 @@ main{
 
 
 
-
-
-.square-animation-left{
-    animation-name: wipe-enter-left;
-    animation-duration: 2.5s;
-    animation-iteration-count: 1;
+/* ******************************** */
+/* Animations */
+/* ******************************** */
+.square-animation-left {
+  animation-name: wipe-enter-left;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
 }
-.square-animation-right{
+
+.square-animation-right {
   animation-name: wipe-enter-right;
   animation-duration: 2.5s;
   animation-iteration-count: 1;
-  
 }
-.opac-reviews-all{
+
+.opac-reviews-all {
   animation-name: opac-reviews;
   animation-duration: 3s;
   animation-iteration-count: 1;
-  
 }
 
-
-
-
-
+/* **************************** */
+/* Keyframes */
+/* **************************** */
 
 
 @keyframes wipe-enter-left {
 
-	0% {
+  0% {
     transform: translate(-50px, 0%);
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
-	}
- 
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }
+
 @keyframes wipe-enter-right {
 
-	0% {
+  0% {
     transform: translate(50px, 1%);
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
-	}
- 
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }
+
 @keyframes opac-reviews {
 
-	0% {
-		opacity: 0;
-    
-	}
-	100% {
-		opacity: 1;
-	}
- 
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }
-
-
-
-
-
-
-
-

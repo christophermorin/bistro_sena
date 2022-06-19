@@ -1,5 +1,9 @@
+// ***********************************************************************
+// Gallery
+// ***********************************************************************
+
 document.getElementById("outer3").addEventListener("click", toggleState3);
-    
+
 function toggleState3() {
   let galleryView = document.getElementById("galleryView")
   let tilesView = document.getElementById("tilesView")
@@ -11,22 +15,22 @@ function toggleState3() {
     outer.classList.remove("outerActive");
     galleryView.style.display = "flex";
     tilesView.style.display = "none";
-    
+
     while (tilesContainer.hasChildNodes()) {
       tilesContainer.removeChild(tilesContainer.firstChild)
-      }  
+    }
   } else {
     slider.classList.add("active");
     outer.classList.add("outerActive");
     galleryView.style.display = "none";
     tilesView.style.display = "flex";
-     
+
     for (let i = 0; i < imgObject.length - 1; i++) {
       let tileItem = document.createElement("div");
       tileItem.classList.add("tileItem");
-      tileItem.style.background =  "url(" + imgObject[i] + ")";
-      tileItem.style.backgroundSize = "cover";  
-      tilesContainer.appendChild(tileItem);      
+      tileItem.style.background = "url(" + imgObject[i] + ")";
+      tileItem.style.backgroundSize = "cover";
+      tilesContainer.appendChild(tileItem);
     }
   };
 }
@@ -54,31 +58,31 @@ function loadGallery() {
 
   let leftView = document.getElementById("leftView");
   leftView.style.background = "url(" + imgObject[prevImg] + ")";
-  
+
   let rightView = document.getElementById("rightView");
   rightView.style.background = "url(" + imgObject[nextImg] + ")";
-  
+
   let linkTag = document.getElementById("linkTag")
   linkTag.href = imgObject[mainImg];
 
 };
 
 function scrollRight() {
-  
+
   prevImg = mainImg;
   mainImg = nextImg;
-  if (nextImg >= (imgObject.length -1)) {
+  if (nextImg >= (imgObject.length - 1)) {
     nextImg = 0;
   } else {
     nextImg++;
-  }; 
+  };
   loadGallery();
 };
 
 function scrollLeft() {
   nextImg = mainImg
   mainImg = prevImg;
-   
+
   if (prevImg === 0) {
     prevImg = imgObject.length - 1;
   } else {
@@ -91,10 +95,10 @@ document.getElementById("navRight").addEventListener("click", scrollRight);
 document.getElementById("navLeft").addEventListener("click", scrollLeft);
 document.getElementById("rightView").addEventListener("click", scrollRight);
 document.getElementById("leftView").addEventListener("click", scrollLeft);
-document.addEventListener('keyup',function(e){
-    if (e.keyCode === 37) {
+document.addEventListener('keyup', function (e) {
+  if (e.keyCode === 37) {
     scrollLeft();
-  } else if(e.keyCode === 39) {
+  } else if (e.keyCode === 39) {
     scrollRight();
   }
 });
@@ -102,100 +106,98 @@ document.addEventListener('keyup',function(e){
 loadGallery();
 
 
-// Top fade in
+
+
+// ************************************************************
+// Booking Section Fade In
+// ************************************************************
+
 const observerLeft = new IntersectionObserver(entries => {
-  
+
   entries.forEach(entry => {
     console.log(entry)
-    const square = entry.target.querySelector('#bookingImg'); // Rename this
-    const circle = entry.target.querySelector('#bookingText'); // Rename this
-    
-
+    const left = entry.target.querySelector('#bookingImg');
+    const right = entry.target.querySelector('#bookingText');
     if (entry.isIntersecting) {
-      square.classList.add('square-animation-left');
-      circle.classList.add('square-animation-right');
+      left.classList.add('square-animation-left');
+      right.classList.add('square-animation-right');
 
-      
-	  return; // if we added the class, exit the function
+      return; // if we added the class, exit the function
     }
 
     // We're not intersecting, so remove the class!
-    square.classList.remove('square-animation-left');
-    circle.classList.remove('square-animation-right');
+    left.classList.remove('square-animation-left');
+    right.classList.remove('square-animation-right');
   });
 });
 
-observerLeft.observe(document.querySelector('.square'));
+observerLeft.observe(document.querySelector('.bookingFade'));
 
-// Mid Fade In
+// ************************************************************
+// Gallery/Middle Section Fade in
+// ************************************************************
+
 const observerRight = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     console.log(entry)
-    const square = entry.target.querySelector('#middleText'); // Rename this
-    const circle = entry.target.querySelector('#galleryView'); // Rename this
-    
-
+    const left = entry.target.querySelector('#middleText');
+    const right = entry.target.querySelector('#galleryView');
     if (entry.isIntersecting) {
-      square.classList.add('square-animation-left');
-      circle.classList.add('square-animation-right');
+      left.classList.add('square-animation-left');
+      right.classList.add('square-animation-right');
 
-      
-	  return; // if we added the class, exit the function
+      return; // if we added the class, exit the function
     }
 
     // We're not intersecting, so remove the class!
-    square.classList.remove('square-animation-left');
-    circle.classList.remove('square-animation-right');
+    left.classList.remove('square-animation-left');
+    right.classList.remove('square-animation-right');
   });
 });
 
-observerRight.observe(document.querySelector('.mid'));
+observerRight.observe(document.querySelector('.galleryFade'));
 
+// *************************************************************
+// Reviews Section Fade in
+// *************************************************************
 
-
-// Reviews Opac
 const observerReview = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     console.log(entry)
-    const square = entry.target.querySelector('#reviews'); // Rename this
-    
-    
-
+    const reviewSec = entry.target.querySelector('#reviews');
     if (entry.isIntersecting) {
-      square.classList.add('opac-reviews-all');
+      reviewSec.classList.add('opac-reviews-all');
 
-      
-	  return; // if we added the class, exit the function
+      return; // if we added the class, exit the function
     }
 
     // We're not intersecting, so remove the class!
-    square.classList.remove('opac-reviews-all');
+    reviewSec.classList.remove('opac-reviews-all');
   });
 });
 
 observerReview.observe(document.querySelector('#reviewOpac'));
 
-// Contact fade
+// ************************************************************
+// Contact section fade in
+// ************************************************************
 
 const contactFade = new IntersectionObserver(entries => {
-  
+
   entries.forEach(entry => {
     console.log(entry)
-    const square = entry.target.querySelector('.contact-left'); // Rename this
-    const circle = entry.target.querySelector('#contact'); // Rename this
-    
-
+    const left = entry.target.querySelector('.contact-left'); 
+    const right = entry.target.querySelector('#contact'); 
     if (entry.isIntersecting) {
-      square.classList.add('square-animation-left');
-      circle.classList.add('square-animation-right');
+      left.classList.add('square-animation-left');
+      right.classList.add('square-animation-right');
 
-      
-	  return; // if we added the class, exit the function
+      return; // if we added the class, exit the function
     }
 
     // We're not intersecting, so remove the class!
-    square.classList.remove('square-animation-left');
-    circle.classList.remove('square-animation-right');
+    left.classList.remove('square-animation-left');
+    right.classList.remove('square-animation-right');
   });
 });
 
